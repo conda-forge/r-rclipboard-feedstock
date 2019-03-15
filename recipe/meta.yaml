@@ -1,4 +1,4 @@
-{% set version = "0.1.1" %}
+{% set version = '0.1.1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -13,7 +13,6 @@ source:
   sha256: b5c166ee912ddf6e73c158f6889336e186d74c17172cfed4916ba169918dfb65
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
   number: 0
   noarch: generic
@@ -23,7 +22,7 @@ build:
 
 requirements:
   build:
-
+    - {{posix}}zip               # [win]
   host:
     - r-base
     - r-shiny
@@ -51,7 +50,7 @@ extra:
 
 # Package: rclipboard
 # Title: Shiny/R Wrapper for 'clipboard.js'
-# Version: 0.1
+# Version: 0.1.1
 # Author: Sebastien Bihorel
 # Maintainer: Sebastien Bihorel <sb.pmlab@gmail.com>
 # Description: Leverages the functionality of 'clipboard.js', a JavaScript library for HMTL5-based copy to clipboard from web pages (see <https://clipboardjs.com> for more information), and provides a reactive copy-to-clipboard UI button  component, called 'rclipButton', for 'shiny' R applications.
@@ -63,6 +62,6 @@ extra:
 # BugReports: http://github.com/sbihorel/rclipboard/issues
 # Imports: shiny
 # NeedsCompilation: no
-# Packaged: 2017-07-29 08:31:24 UTC; sebastien
+# Packaged: 2019-03-15 00:49:15 UTC; sebastien
 # Repository: CRAN
-# Date/Publication: 2017-07-29 08:44:21 UTC
+# Date/Publication: 2019-03-15 07:10:03 UTC
