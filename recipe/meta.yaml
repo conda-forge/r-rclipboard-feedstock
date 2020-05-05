@@ -1,4 +1,4 @@
-{% set version = '0.1.2' %}
+{% set version = "0.1.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -13,8 +13,8 @@ source:
   sha256: bc6864230f77c250de86192dc10c01309ca5478d4a3d2c5f1c782cccc5ef7313
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 2
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -22,7 +22,7 @@ build:
 
 requirements:
   build:
-    - {{posix}}zip               # [win]
+    - {{ posix }}zip               # [win]
   host:
     - r-base
     - r-shiny
@@ -38,12 +38,12 @@ test:
 about:
   home: http://github.com/sbihorel/rclipboard
   license: MIT
-  summary: Leverages the functionality of 'clipboard.js', a JavaScript library for HMTL5-based
-    copy to clipboard from web pages (see <https://clipboardjs.com> for more information),
-    and provides a reactive copy-to-clipboard UI button  component, called 'rclipButton',
-    for 'shiny' R applications.
+  summary: Leverages the functionality of 'clipboard.js', a JavaScript library for HMTL5-based copy to clipboard from web pages (see <https://clipboardjs.com> for more information), and provides a reactive copy-to-clipboard UI button  component, called 'rclipButton', for 'shiny' R applications.
   license_family: MIT
 
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
+    - LICENSE
 extra:
   recipe-maintainers:
     - conda-forge/r
