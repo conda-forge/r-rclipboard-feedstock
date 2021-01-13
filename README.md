@@ -5,11 +5,9 @@ Home: http://github.com/sbihorel/rclipboard
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rclipboard-feedstock/blob/master/LICENSE.txt)
 
 Summary: Leverages the functionality of 'clipboard.js', a JavaScript library for HMTL5-based copy to clipboard from web pages (see <https://clipboardjs.com> for more information), and provides a reactive copy-to-clipboard UI button  component, called 'rclipButton', for 'shiny' R applications.
-
-
 
 Current build status
 ====================
