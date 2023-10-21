@@ -1,4 +1,4 @@
-{% set version = "0.1.6" %}
+{% set version = "0.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rclipboard_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rclipboard/rclipboard_{{ version }}.tar.gz
-  sha256: 7e83f6355869eee1630849981abf930fa048cd3861407466a4ee4e07a1466269
+  sha256: 87e43c98471c802cdfd21f3d4c0850973630c907e2aea03a0611e64546e8a3ea
 
 build:
   merge_build_host: true  # [win]
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
